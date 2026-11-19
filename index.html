@@ -1,160 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZYRAVON | Intelligence. Automated.</title>
-<meta name="description" content="ZYRAVON builds intelligent AI automation, AI agents and custom software solutions for modern businesses.">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:Arial,sans-serif;
-  background:#080b14;
-  color:#f5f7ff;
-  line-height:1.6;
-}
-header{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:24px 8%;border-bottom:1px solid #20283a;
-}
-.logo{font-size:27px;font-weight:800;letter-spacing:3px;color:#fff}
-.logo span{color:#63e5ff}
-nav a{color:#c5cede;text-decoration:none;margin-left:25px;font-size:14px}
-.hero{
-  min-height:570px;padding:110px 8% 90px;
-  background:radial-gradient(ellipse at 75% 35%,#12304b 0%,#080b14 55%);
-}
-.tag{color:#63e5ff;letter-spacing:3px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:25px 0}
-h1 span{color:#63e5ff}
-.hero p{max-width:600px;color:#b7c1d3;font-size:18px}
-.btn{
- display:inline-block;margin-top:32px;padding:14px 25px;
- background:#63e5ff;color:#07101b;text-decoration:none;
- border-radius:5px;font-weight:bold
-}
-section{padding:85px 8%}
-.section-title{font-size:36px;margin-bottom:14px}
-.sub{color:#aab5c8;max-width:650px;margin-bottom:35px}
-.services{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:20px
-}
-.service{
- background:#101827;border:1px solid #26364c;
- padding:28px;border-radius:12px
-}
-.service h3{color:#63e5ff;margin-bottom:12px}
-.service p{color:#aeb9ca;font-size:15px}
-.steps{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
- gap:20px
-}
-.step{padding:22px;border-left:2px solid #63e5ff;background:#101827}
-.step strong{color:#63e5ff;font-size:22px}
-.step h3{margin:10px 0}
-.step p{color:#aeb9ca;font-size:14px}
-.about{background:#0d1421}
-.about p{max-width:760px;color:#b7c1d3}
-.contact{text-align:center}
-.contact p{color:#aeb9ca}
-footer{
- padding:25px 8%;border-top:1px solid #20283a;
- color:#8995a8;text-align:center;font-size:13px
-}
-@media(max-width:650px){
- header{flex-direction:column;gap:15px}
- nav a{margin:0 8px}
- .hero{padding-top:80px}
- section{padding:65px 7%}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZYRAVON builds intelligent AI automation, AI agents and custom software that help businesses work smarter.">
+  <meta name="theme-color" content="#080b14">
+  <title>ZYRAVON — Intelligence. Automated.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b14;--panel:#101625;--panel2:#0d1320;--text:#f4f7ff;--muted:#9aa6bd;--line:rgba(255,255,255,.1);--purple:#9b7bff;--cyan:#62e6e0;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(91,67,190,.18),transparent 35%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,11,20,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 24px "Space Grotesk";letter-spacing:2px}.brand span{color:var(--cyan)}
+    .links{display:flex;gap:30px;align-items:center;color:#c0c9d9;font-size:14px}.links a:hover{color:var(--cyan)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:9px;background:linear-gradient(110deg,var(--purple),#6d8cff);font-weight:700;color:white;border:0;cursor:pointer;box-shadow:0 8px 28px rgba(123,104,238,.22)}
+    .btn.secondary{background:transparent;border:1px solid var(--line);box-shadow:none}.menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{padding:105px 0 92px;display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center;min-height:620px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+    h1,h2,h3{font-family:"Space Grotesk";line-height:1.12;margin:0}h1{font-size:clamp(46px,6vw,76px);letter-spacing:-3px;margin:20px 0}
+    h1 em{font-style:normal;background:linear-gradient(100deg,#b8a3ff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:18px;color:var(--muted);max-width:590px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{margin-top:28px;color:#77849c;font-size:12px;letter-spacing:.4px}
+    .visual{position:relative;min-height:390px;display:grid;place-items:center}.orb{width:min(340px,75vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(98,230,224,.35),transparent 25%),radial-gradient(circle at 65% 65%,rgba(155,123,255,.42),transparent 45%),#11182a;border:1px solid rgba(170,160,255,.28);box-shadow:0 0 90px rgba(115,91,230,.2),inset 0 0 65px rgba(98,230,224,.08);position:relative}
+    .orb:before,.orb:after{content:"";position:absolute;inset:13%;border:1px solid rgba(98,230,224,.35);border-radius:50%;transform:rotate(-32deg) scaleX(1.5)}.orb:after{transform:rotate(55deg) scaleX(1.5);border-color:rgba(155,123,255,.5)}
+    .core{position:absolute;inset:39%;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--purple));box-shadow:0 0 45px rgba(98,230,224,.65)}
+    .float-card{position:absolute;padding:13px 16px;background:rgba(16,22,37,.88);border:1px solid var(--line);border-radius:12px;box-shadow:0 15px 40px #0005;font-size:13px;color:#dce5f5}.float-card b{display:block;font-size:14px;color:white}.fc1{top:45px;left:0}.fc2{bottom:45px;right:-5px}
+    section{padding:85px 0}.section-head{max-width:650px;margin-bottom:38px}.kicker{color:var(--cyan);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700}.section-head h2{font-size:clamp(32px,4vw,48px);margin:13px 0}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{padding:25px;background:linear-gradient(145deg,rgba(20,29,47,.94),rgba(12,17,29,.94));border:1px solid var(--line);border-radius:15px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(98,230,224,.4)}
+    .icon{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(155,123,255,.15);color:var(--cyan);font-size:20px;margin-bottom:22px}.card h3{font-size:19px;margin-bottom:11px}.card p{color:var(--muted);font-size:14px;margin:0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.feature-panel{padding:30px;border-radius:18px;background:linear-gradient(145deg,#151d31,#0e1422);border:1px solid var(--line)}
+    .feature-row{display:flex;gap:15px;padding:17px 0;border-bottom:1px solid var(--line)}.feature-row:last-child{border:0}.check{color:var(--cyan);font-size:20px}.feature-row b{display:block}.feature-row small{color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:23px;border:1px solid var(--line);border-radius:14px;background:var(--panel2)}.num{font:700 28px "Space Grotesk";color:var(--purple);margin-bottom:20px}.step h3{font-size:17px;margin-bottom:9px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .cta{padding:48px;border-radius:20px;border:1px solid rgba(155,123,255,.3);background:radial-gradient(circle at 90% 0%,rgba(155,123,255,.2),transparent 40%),#11182a;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{font-size:clamp(28px,4vw,42px);margin-bottom:10px}.cta p{color:var(--muted);margin:0}
+    form{display:grid;gap:13px}.field{width:100%;padding:14px 15px;background:#0a101c;border:1px solid var(--line);border-radius:9px;color:white;font:inherit}.field:focus{outline:1px solid var(--purple)}textarea.field{min-height:125px;resize:vertical}.form-note{font-size:12px;color:var(--muted)}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#8390a8;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:75px}.visual{min-height:340px}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.split{gap:30px}}
+    @media(max-width:650px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px;background:#0c1220;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.nav-cta{display:none}h1{letter-spacing:-2px}.hero{padding:65px 0 45px;gap:20px}.visual{min-height:300px}.fc1{left:-5px}.fc2{right:-5px}.grid,.steps,.split{grid-template-columns:1fr}.split{gap:25px}section{padding:65px 0}.cta{padding:28px;display:block}.cta .btn{margin-top:20px}}
+  </style>
 </head>
-
 <body>
-<header>
-  <div class="logo">ZYRA<span>VON</span></div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
+<header><div class="wrap nav">
+  <a class="brand" href="#home">ZYRA<span>VON</span></a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+  <nav class="links" id="navLinks"><a href="#services">Services</a><a href="#about">About</a><a href="#process">How it works</a><a href="#contact">Contact</a></nav>
+  <a class="btn nav-cta" href="#contact">Start a project ↗</a>
+</div></header>
 <main>
-<section class="hero" id="home">
-  <div class="tag">INTELLIGENCE. AUTOMATED.</div>
-  <h1>Make Your Business<br>Work <span>Smarter.</span></h1>
-  <p>
-    We bring AI, intelligent automation and custom software
-    together to help businesses save time, work smarter
-    and build for the future.
-  </p>
-  <a class="btn" href="#services">Explore Our Services</a>
-</section>
-
-<section id="services">
-  <div class="tag">WHAT WE DO</div>
-  <h2 class="section-title">Solutions That Move You Forward.</h2>
-  <p class="sub">Practical technology solutions designed to make everyday business operations smarter and more efficient.</p>
-
-  <div class="services">
-    <div class="service">
-      <h3>AI Automation</h3>
-      <p>Automate repetitive business workflows and reduce manual work with intelligent systems.</p>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> AI • Automation • Software</div>
+      <h1>Make your business<br>work <em>smarter.</em></h1>
+      <p class="lead">We build intelligent systems that simplify operations, automate repetitive work and help ambitious businesses move forward.</p>
+      <div class="actions"><a class="btn" href="#contact">Let's build together ↗</a><a class="btn secondary" href="#services">Explore services</a></div>
+      <div class="hero-note">INTELLIGENCE. AUTOMATED.</div>
     </div>
-    <div class="service">
-      <h3>Intelligent AI Agents</h3>
-      <p>Explore AI assistants designed to support customer service, research and business tasks.</p>
-    </div>
-    <div class="service">
-      <h3>Custom Software</h3>
-      <p>Purpose-built digital tools and software experiences for your business needs.</p>
-    </div>
-    <div class="service">
-      <h3>Digital Operations</h3>
-      <p>Organize digital processes and build smarter content and operational systems.</p>
-    </div>
+    <div class="visual" aria-hidden="true"><div class="orb"><div class="core"></div></div><div class="float-card fc1">✦ <b>Intelligent automation</b>Less busywork</div><div class="float-card fc2">↗ <b>Built to scale</b>Systems that grow</div></div>
   </div>
-</section>
-
-<section class="about" id="about">
-  <div class="tag">ABOUT ZYRAVON</div>
-  <h2 class="section-title">Built for a Smarter Future.</h2>
-  <p>
-    ZYRAVON is an emerging AI automation and software brand.
-    Our vision is to make useful technology more accessible
-    through intelligent tools, thoughtful design and reliable
-    digital solutions. Every solution should be tested and
-    reviewed before it is used in real business operations.
-  </p>
-</section>
-
-<section>
-  <div class="tag">OUR PROCESS</div>
-  <h2 class="section-title">From Idea to Intelligent Solution.</h2>
-  <div class="steps">
-    <div class="step"><strong>01</strong><h3>Understand</h3><p>Understand the business goal and requirements.</p></div>
-    <div class="step"><strong>02</strong><h3>Design</h3><p>Plan the right technology and workflow.</p></div>
-    <div class="step"><strong>03</strong><h3>Build & Test</h3><p>Create and test the proposed solution.</p></div>
-    <div class="step"><strong>04</strong><h3>Improve</h3><p>Review results and make improvements.</p></div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="tag">LET'S BUILD SOMETHING SMARTER</div>
-  <h2 class="section-title">Your Next Idea Starts Here.</h2>
-  <p>Our contact and project enquiry system is coming soon.</p>
-</section>
+  <section id="services"><div class="wrap">
+    <div class="section-head"><div class="kicker">What we do</div><h2>Technology that moves work forward.</h2><p>From a single workflow to a complete digital solution, we turn practical business needs into useful technology.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">✧</div><h3>AI Automation</h3><p>Automate repetitive tasks, connect tools and make everyday workflows faster and more consistent.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Intelligent AI Agents</h3><p>Design AI assistants that help answer questions, organize information and support customer operations.</p></article>
+      <article class="card"><div class="icon">⌘</div><h3>Custom Software</h3><p>Build websites, dashboards and tailored digital tools around the way your business works.</p></article>
+      <article class="card"><div class="icon">↗</div><h3>Digital Operations</h3><p>Improve how teams manage requests, information and service delivery with connected systems.</p></article>
+    </div>
+  </div></section>
+  <section id="about"><div class="wrap split">
+    <div><div class="kicker">Why ZYRAVON</div><div class="section-head"><h2>Less friction.<br>More possibility.</h2><p>Good technology should make work clearer, not more complicated. We focus on practical solutions, thoughtful design and measurable improvements.</p></div><a class="btn secondary" href="#contact">Tell us what you need ↗</a></div>
+    <div class="feature-panel">
+      <div class="feature-row"><span class="check">✓</span><div><b>Built around your workflow</b><small>Solutions shaped around real business requirements.</small></div></div>
+      <div class="feature-row"><span class="check">✓</span><div><b>Clear and useful by design</b><small>Simple experiences for customers and teams.</small></div></div>
+      <div class="feature-row"><span class="check">✓</span><div><b>Designed to evolve</b><small>A flexible foundation for future improvements.</small></div></div>
+      <div class="feature-row"><span class="check">✓</span><div><b>Human-guided delivery</b><small>Automation with review, accountability and care.</small></div></div>
+    </div>
+  </div></section>
+  <section id="process"><div class="wrap">
+    <div class="section-head"><div class="kicker">The process</div><h2>From idea to working solution.</h2><p>A straightforward process keeps the project focused and transparent.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Discover</h3><p>We understand your goals, challenges and what success should look like.</p></div>
+      <div class="step"><div class="num">02</div><h3>Plan</h3><p>We define the right scope, approach and delivery milestones.</p></div>
+      <div class="step"><div class="num">03</div><h3>Build</h3><p>We create, test and refine the solution with your feedback.</p></div>
+      <div class="step"><div class="num">04</div><h3>Improve</h3><p>We help you review results and identify the next useful improvements.</p></div>
+    </div>
+  </div></section>
+  <section id="contact"><div class="wrap">
+    <div class="cta"><div><div class="kicker">Have a project in mind?</div><h2>Let's make work smarter.</h2><p>Tell us what you're trying to improve. We'll take it from there.</p></div><a class="btn" href="mailto:hello@zyravon.com?subject=Project%20enquiry">Email ZYRAVON ↗</a></div>
+    <div style="max-width:680px;margin:40px auto 0;text-align:center"><p class="form-note">Prefer a project brief? Fill this in and your email app will open with the details ready to send.</p>
+      <form id="contactForm">
+        <input class="field" name="name" placeholder="Your name" required>
+        <input class="field" type="email" name="email" placeholder="Your email address" required>
+        <input class="field" name="company" placeholder="Company (optional)">
+        <textarea class="field" name="message" placeholder="Tell us a little about your project..." required></textarea>
+        <button class="btn" type="submit">Prepare enquiry ↗</button>
+        <div class="form-note">Email destination is currently set to hello@zyravon.com. Replace it with your confirmed business email before launch.</div>
+      </form>
+    </div>
+  </div></section>
 </main>
-
-<footer>
-  © 2026 ZYRAVON. Intelligence. Automated.
-</footer>
+<footer><div class="wrap foot"><div><span class="brand" style="font-size:18px">ZYRA<span>VON</span></span><div>Intelligence. Automated.</div></div><div>© <span id="year"></span> ZYRAVON. All rights reserved.</div></div></footer>
+<button id="chatToggle" class="btn" style="position:fixed;right:22px;bottom:22px;z-index:30;border-radius:50px">Chat with us ✦</button>
+<div id="chatPanel" style="display:none;position:fixed;right:22px;bottom:82px;width:min(350px,calc(100vw - 32px));z-index:31;background:#101625;border:1px solid rgba(255,255,255,.14);border-radius:16px;box-shadow:0 20px 60px #0009;overflow:hidden">
+  <div style="padding:15px 17px;background:linear-gradient(110deg,#6d58c7,#277f91);font-weight:700">ZYRAVON Assistant <button id="chatClose" style="float:right;background:none;border:0;color:white;font-size:19px;cursor:pointer">×</button><div style="font-size:11px;font-weight:400;opacity:.85">Website demo assistant</div></div>
+  <div id="chatMessages" style="height:245px;overflow:auto;padding:15px;font-size:13px"><div style="background:#1a263b;padding:11px;border-radius:10px;margin-bottom:10px">Welcome! I'm the ZYRAVON website assistant. What would you like to know?</div></div>
+  <form id="chatForm" style="display:flex;gap:7px;padding:10px;border-top:1px solid rgba(255,255,255,.1)"><input id="chatInput" aria-label="Message" placeholder="Type your message..." style="min-width:0;flex:1;background:#080d17;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:11px;color:white"><button class="btn" style="padding:9px 13px" type="submit">Send</button></form>
+</div>
 <script src="chatbot.js"></script>
-</body>
-</html>
+</body></html>
