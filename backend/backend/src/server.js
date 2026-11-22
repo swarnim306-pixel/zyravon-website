@@ -4,6 +4,11 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 
+const {
+  checkDatabaseConnection,
+  closeDatabase
+} = require("./config/database");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -17,25 +22,29 @@ app.use(cors({
 
 app.use(express.json({ limit: "1mb" }));
 
-// Health check
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    success: true,
-    service: "ZYRAVON AI Platform",
-    status: "operational",
-    timestamp: new Date().toISOString()
-  });
-});
-
-// Welcome route
+// API welcome route
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to ZYRAVON Backend API",
+    success: true,
+    message: "Welcome to ZYRAVON AI Platform API",
     status: "running"
   });
 });
 
-// Unknown routes
+// Server and database health check
+app.get("/health", async (req, res) => {
+  const databaseConnected = await checkDatabaseConnection();
+
+  res.status(databaseConnected ? 200 : 503).json({
+    success: databaseConnected,
+    service: "ZYRAVON AI Platform",
+    server: "operational",
+    database: databaseConnected ? "connected" : "disconnected",
+    timestamp: new Date().toISOString()
+  });
+});
+
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -53,6 +62,20 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
+// Start server
+const server = app.listen(PORT, () => {
   console.log(`ZYRAVON API running on port ${PORT}`);
 });
+
+// Graceful shutdown
+async function shutdown() {
+  console.log("Shutting down ZYRAVON API...");
+
+  server.close(async () => {
+    await closeDatabase();
+    process.exit(0);
+  });
+}
+
+process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown);
