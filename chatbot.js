@@ -16,5 +16,5 @@ $("chatForm").onsubmit=e=>{e.preventDefault();let v=input.value.trim();if(!v)ret
 $("menuBtn").onclick=()=>{let open=$("navLinks").classList.toggle("open");$("menuBtn").setAttribute("aria-expanded",String(open));$("menuBtn").textContent=open?"×":"☰"};
 $("navLinks").querySelectorAll("a").forEach(a=>a.onclick=()=>{$("navLinks").classList.remove("open");$("menuBtn").textContent="☰"});
 $("year").textContent=new Date().getFullYear();
-$("projectForm").onsubmit=e=>{e.preventDefault();let f=new FormData(e.currentTarget);let sub=encodeURIComponent("ZYRAVON project enquiry — "+f.get("need"));let body=encodeURIComponent("Name: "+f.get("name")+"\nEmail: "+f.get("email")+"\nCompany: "+(f.get("company")||"Not provided")+"\nNeed: "+f.get("need")+"\n\nProject details:\n"+f.get("message"));location.href="mailto:YOUR_CONFIRMED_BUSINESS_EMAIL?subject="+sub+"&body="+body};
+$("projectForm").onsubmit=e=>{e.preventDefault();let f=new FormData(e.currentTarget);let sub=encodeURIComponent("ZYRAVON project enquiry — "+f.get("need"));let body=encodeURIComponent("Name: "+f.get("name")+"\nEmail: "+f.get("email")+"\nCompany: "+(f.get("company")||"Not provided")+"\nNeed: "+f.get("need")+"\n\nProject details:\n"+f.get("message"));location.href="mailto:zyravon.business@gmail.com?subject="+sub+"&body="+body};
 })();
